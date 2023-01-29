@@ -1,0 +1,67 @@
+{
+  "name": "azurevm01",
+  "id": "/subscriptions/[subscriptionid]/resourceGroups/vm-rg/providers/Microsoft.Compute/virtualMachines/azurevm01",
+  "type": "Microsoft.Compute/virtualMachines",
+  "location": "eastus",
+  "properties": {
+    "vmId": "5787d55b-3c06-4c4a-8ba7-558e91b125c3",
+    "hardwareProfile": {
+      "vmSize": "Standard_B1s"
+    },
+    "storageProfile": {
+      "imageReference": {
+        "publisher": "canonical",
+        "offer": "0001-com-ubuntu-server-focal",
+        "sku": "20_04-lts-gen2",
+        "version": "latest",
+        "exactVersion": "20.04.202301130"
+      },
+      "osDisk": {
+        "osType": "Linux",
+        "name": "azurevm01_disk1_22984e021eb24747915516cbd952c14f",
+        "createOption": "FromImage",
+        "caching": "ReadWrite",
+        "managedDisk": {
+          "storageAccountType": "Premium_LRS",
+          "id": "/subscriptions/[subscriptionid]/resourceGroups/vm-rg/providers/Microsoft.Compute/disks/azurevm01_disk1_22984e021eb24747915516cbd952c14f"
+        },
+        "deleteOption": "Delete",
+        "diskSizeGB": 30
+      },
+      "dataDisks": []
+    },
+    "osProfile": {
+      "computerName": "azurevm01",
+      "adminUsername": "azureuser",
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": false,
+        "provisionVMAgent": true,
+        "patchSettings": {
+          "patchMode": "ImageDefault",
+          "assessmentMode": "ImageDefault"
+        },
+        "enableVMAgentPlatformUpdates": false
+      },
+      "secrets": [],
+      "allowExtensionOperations": true,
+      "requireGuestProvisionSignal": true
+    },
+    "networkProfile": {
+      "networkInterfaces": [
+        {
+          "id": "/subscriptions/[subscriptionid]/resourceGroups/vm-rg/providers/Microsoft.Network/networkInterfaces/azurevm01808",
+          "properties": {
+            "deleteOption": "Detach"
+          }
+        }
+      ]
+    },
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": true
+      }
+    },
+    "provisioningState": "Succeeded",
+    "timeCreated": "2023-01-29T06:42:04.5597622+00:00"
+  }
+}
