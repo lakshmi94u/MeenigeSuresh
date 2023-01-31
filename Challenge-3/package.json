@@ -1,0 +1,14 @@
+{
+    "name": "challenge3",
+    "version": "1.0.0",
+    "description": "A clone of Elixir's get_in function",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "devDependencies": {
+        "mocha": "latest"
+    },
+    "author": "suresh",
+    "license": "ISC"
+}
